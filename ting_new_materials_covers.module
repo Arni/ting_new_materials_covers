@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the Ting New Materials Covers feature.
+ */
+
+include_once 'ting_new_materials_covers.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * It simply tells panels where to find the .inc files that define various
+ * args, contexts, content_types.
+ */
+function ting_new_materials_covers_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
